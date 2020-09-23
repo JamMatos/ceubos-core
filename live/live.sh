@@ -50,7 +50,7 @@ lb config noauto \
      --bootappend-live-failsafe "initrd=/live/initrd boot=live persistence config memtest noapic noapm nodma nomce nolapic nomodeset nosmp splash vga=791 pti=off blacklist.nouveau=1 i915.modeset=1 gfxpayload=640x480 acpi_backlight=vendor acpi_osi=!" \
      --firmware-chroot true \
      --firmware-binary true \
-     --apt-options "--force-yes --yes -oAcquire::Check-Valid-Until=false" \
+     --apt-options "--allow --yes -oAcquire::Check-Valid-Until=false" \
      --apt apt \
      --apt-source-archives "false" \
      --apt-indices true \
