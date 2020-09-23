@@ -28,7 +28,7 @@ lb config noauto \
      --binary-filesystem "ext4" \
      --initramfs live-boot \
      --initramfs-compression gzip \
-     --loadlin fale \
+     --loadlin false \
      --win32-loader false \
      --iso-application ceub-os \
      --iso-volume ceub-os \
@@ -46,7 +46,7 @@ lb config noauto \
      --mirror-bootstrap http://httpredir.debian.org/debian/ \
      --mirror-binary http://httpredir.debian.org/debian/ \
      --mirror-binary-security http://security.debian.org/ \
-     --bootappend-live "boot=live components timezone=America/Sao_Paulo locales=pt_BR.UTF-8 keyboard-layouts=br keyboard-variants=abnt2 hostname=EducatuX username=educatux noprompt noeject autologin splash blacklist.nouveau=1 i915.modeset=1 gfxpayload=640x480 acpi_backlight=vendor acpi_osi=!" \
+     --bootappend-live "boot=live components timezone=America/Sao_Paulo locales=pt_BR.UTF-8 keyboard-layouts=br keyboard-variants=abnt2 hostname=ceub-os username=ceub-os noprompt noeject autologin splash blacklist.nouveau=1 i915.modeset=1 gfxpayload=640x480 acpi_backlight=vendor acpi_osi=!" \
      --bootappend-live-failsafe "initrd=/live/initrd boot=live persistence config memtest noapic noapm nodma nomce nolapic nomodeset nosmp splash vga=791 pti=off blacklist.nouveau=1 i915.modeset=1 gfxpayload=640x480 acpi_backlight=vendor acpi_osi=!" \
      --firmware-chroot true \
      --firmware-binary true \
@@ -59,9 +59,9 @@ lb config noauto \
      --debconf-priority critical \
      --iso-preparer "CEUB" \
      --iso-publisher "CEUB - https://www.ceubos.com.br" \
-     --keyring-packages "blueproximity wireless-regdb=2020.04.29-2~bpo10+1 qtbase5-dev \
+     --keyring-packages "wireless-regdb=2020.04.29-2~bpo10+1 qtbase5-dev \
      glx-alternative-mesa=1.2.0~bpo10+1 update-glx=1.2.0~bpo10+1 glx-diversions=1.2.0~bpo10+1 \
-     python3-dev arduino arduino-mk dfu-programmer calamares-settings-educatux-hybrid \
+     python3-dev arduino arduino-mk dfu-programmer\
      calamares shotcut btrfs-progs python3-btrfs extlinux openboard flatpak snapd vrms \
      iramuteq mesa-utils-extra flashplayer-mozilla firefox-esr firefox-esr-l10n-all \
      fonts-arabeyes fonts-arphic-ukai fonts-arphic-uming fonts-beng fonts-beng-extra \
@@ -92,7 +92,7 @@ lb config noauto \
      apt-transport-https  google-talkplugin gtk2-engines-pixbuf cifs-utils \
      doxygen vim openscenegraph libopenthreads20 libopenthreads20 openscenegraph \
      openscenegraph-doc openscenegraph-examples eviacam onboard mate-themes \
-     libkpmcore-dev libkpmcore7 educatux-games64 fakeroot mpg123 unrar \
+     libkpmcore-dev libkpmcore7 fakeroot mpg123 unrar \
      plymouth plymouth-themes plymouth-theme-hamara xserver-xorg-input-aiptek \
      xserver-xorg-input-evdev xserver-xorg-input-kbd xserver-xorg-input-multitouch \
      xserver-xorg-input-mouse xserver-xorg-video-qxl nodejs fonts-dejavu \
@@ -112,7 +112,8 @@ lb config noauto \
      composer console-setup console-setup-linux cpp cracklib-runtime \
      crda culmus cups cups-browsed cups-bsd cups-client cups-common \
      cups-core-drivers cups-daemon cups-filters cups-filters-core-drivers \
-     cups-pk-helper cups-ppdc cups-server-common curl dbconfig-common dbus dbus-user-session dbus-x11 dconf-gsettings-backend dconf-service debhelper debootstrap \
+     cups-pk-helper cups-ppdc cups-server-common curl dbconfig-common dbus dbus-user-session dbus-x11 dconf-
+     gsettings-backend dconf-service debhelper debootstrap \
      default-jdk default-jdk-headless default-jre default-jre-headless \
      default-mysql-client desktop-base desktop-file-utils \
      dh-autoreconf dh-strip-nondeterminism dictionaries-common \
@@ -151,7 +152,7 @@ lb config noauto \
      gir1.2-wnck-3.0 gir1.2-xapp-1.0 gir1.2-xkl-1.0 gir1.2-zeitgeist-2.0 \
      gnote gnucap gnupg2 gocr goldendict gparted gphoto2 greybird-gtk-theme grilo-plugins-0.3 \
      groff-base growisofs \
-     gscan2pdf gsettings-desktop-schemas gsfonts gsfonts-x11 gstreamer1.0-alsa gstreamer1.0-clutter-3.0 gstreamer1.0-espeak gstreamer1.0-libav gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-x \
+     gscan2pdf gsettings-desktop-schemas gsfonts gsfonts-x11 gstreamer1.0-alsa gstreamer1.0-clutter-3.0              gstreamer1.0-espeak gstreamer1.0-libav gstreamer1.0-nice gstreamer1.0-plugins-bad gstreamer1.0-plugins-base      gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-x \
      gthumb gthumb-data \
      gtk-update-icon-cache gtk2-engines \
      gvfs gvfs-backends gvfs-bin gvfs-common gvfs-daemons gvfs-fuse gvfs-libs \
@@ -247,6 +248,7 @@ lb config noauto \
      firmware-ti-connectivity firmware-zd1211 grub-firmware-qemu \
      hannah-foo2zjs hdmi2usb-fx2-firmware hdmi2usb-mode-switch \
      intel-microcode ipxe-qemu midisport-firmware ovmf sigrok-firmware-fx2lafw \
-     ubertooth-firmware ssh-askpass-gnome" \
+     ubertooth-firmware ssh-askpass-gnome x11-xserver-utils gtk2-engines gtk2-engines-pixbuf xfce4-power-manager\
+     policykit-1 xfdesktop4 xfce4-panel xfce4-session xfwm4" \
      --source "false" \
      "${@}"
