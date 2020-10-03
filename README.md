@@ -1,6 +1,7 @@
 # CEUB OS
 **“Nos ensinem a ter liberdade novamente”** \
 \- CeubOS Core
+teste
 
 
 # Atualizar seus repositorios para o backports
